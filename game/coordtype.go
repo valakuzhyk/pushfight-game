@@ -3,6 +3,16 @@ package game
 // CoordType classifies the coordinate based on what's going on.
 type CoordType int
 
+const (
+	InvalidCoord CoordType = iota
+	OffTheBoard
+	WhiteSquare
+	BlackSquare
+	WhiteCircle
+	BlackCircle
+	Open
+)
+
 func (c CoordType) String() string {
 	switch c {
 	case InvalidCoord:
@@ -22,16 +32,6 @@ func (c CoordType) String() string {
 	}
 	return "UnknownCoordType"
 }
-
-const (
-	InvalidCoord CoordType = iota
-	OffTheBoard
-	WhiteSquare
-	BlackSquare
-	WhiteCircle
-	BlackCircle
-	Open
-)
 
 func (c CoordType) CoordSymbol() string {
 	switch c {

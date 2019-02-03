@@ -1,13 +1,13 @@
 package game
 
-func black(p Piece) Piece {
+func black(p Piece) *Piece {
 	p.IsWhite = false
-	return p
+	return &p
 }
 
-func white(p Piece) Piece {
+func white(p Piece) *Piece {
 	p.IsWhite = true
-	return p
+	return &p
 }
 
 func square(loc Coord) Piece {
